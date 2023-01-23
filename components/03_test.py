@@ -149,8 +149,14 @@ if __name__ == "__main__":
         cat_images = np.concatenate(
             [image, line, ori_mask, line, y_pred], axis = 1
             )
+        sample_input_output = np.concatenate(
+            [image, line, y_pred], axis = 1
+            )
+        
+        sample_input_output = cv2.resize(sample_input_output, (SIZE))
         
         cv2.imwrite(f"results/{name}.png", cat_images)
+        cv2.imwrite(f"sample_result.png", sample_input_output)
 
     logging.info("Saved the Resulted Mask Images at results folder...")
     
