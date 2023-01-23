@@ -4,7 +4,7 @@ certifi
 cffi 
 charset-normalizer 
 contourpy==1.0.7
-cryptography
+cryptography 
 cycler==0.11.0
 flit_core 
 fonttools==4.38.0
@@ -34,12 +34,12 @@ requests
 scikit-image==0.19.3
 scikit-learn==1.2.0
 scipy==1.10.0
-six 
+six
 threadpoolctl==3.1.0
 tifffile==2022.10.10
-torch==1.12.1
-torchaudio==0.12.1
-torchvision==0.13.1
+torch==1.12.0
+torchaudio==0.12.0
+torchvision==0.13.0
 tqdm==4.64.1
-typing_extensions 
-urllib3
+typing_extensions
+urllib3 
