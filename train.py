@@ -76,10 +76,10 @@ if __name__ == "__main__":
     
 
     """ Hyperparameters """
-    H= 512
+    H = 512
     W = 512
     SIZE = (H, W)
-    BATCH_SIZE = 2
+    BATCH_SIZE = 1
     NUM_EPOCHS = 10
     LR = 0.001
     CHECKPOINT_PATH = os.path.join(os.getcwd(), "files", "checkpoint.pth")
