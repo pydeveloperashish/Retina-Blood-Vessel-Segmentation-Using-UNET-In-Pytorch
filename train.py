@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from glob import glob
+from tqdm.auto import tqdm
 from utils import seeding, create_dir, epoch_time
 from unet.unet_model import build_unet
 from unet.loss import DiceLoss, DiceBCELoss
@@ -79,7 +80,7 @@ if __name__ == "__main__":
     W = 512
     SIZE = (H, W)
     BATCH_SIZE = 2
-    NUM_EPOCHS = 5
+    NUM_EPOCHS = 10
     LR = 0.001
     CHECKPOINT_PATH = os.path.join(os.getcwd(), "files", "checkpoint.pth")
     
@@ -118,7 +119,9 @@ if __name__ == "__main__":
     
     
     """ Training the Model """
-    for epoch in range(0, NUM_EPOCHS):
+    best_valid_loss = float("inf")
+    
+    for epoch in tqdm(range(0, NUM_EPOCHS)):
         start_time = time.time()
         
         train_loss = train(model = model, loader = train_loader, 
@@ -127,6 +130,15 @@ if __name__ == "__main__":
         
         valid_loss = evaluate(model = model, loader = valid_loader, 
                               loss_fn = loss_fn, device = device)
+        
+        """ Saving the model only if valid_loss improves """
+        if valid_loss < best_valid_loss:
+            data_str = f"Valid Loss Improved From {best_valid_loss:2.4f} to {valid_loss:2.4f}. Saving checkpoint: {CHECKPOINT_PATH}"
+            print(data_str)
+            
+            best_valid_loss = valid_loss
+            torch.save(model.state_dict(), CHECKPOINT_PATH)
+        
         
         end_time = time.time()
         
