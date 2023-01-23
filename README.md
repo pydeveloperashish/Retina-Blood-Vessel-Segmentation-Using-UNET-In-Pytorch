@@ -3,4 +3,4 @@ Dataset Link:- https://www.kaggle.com/datasets/andrewmvd/drive-digital-retinal-i
 
 
 
-![Alt text](results/14_test_0.png)
+![14_test_0.png](results/14_test_0.png)
