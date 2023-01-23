@@ -11,6 +11,7 @@ from tqdm.auto import tqdm
 from sklearn.metrics import accuracy_score, f1_score, jaccard_score, precision_score, recall_score
 from unet.unet_model import build_unet
 from utils import create_dir, seeding
+from logger import logging
 
 
 
@@ -44,6 +45,10 @@ def mask_parse(mask):
 
 
 if __name__ == "__main__":
+    
+    logging.info(" Testing Started...")
+    logging.info("Making Predictions on Test Data...")
+    
     """ Seeding """
     seeding(42)
     
@@ -77,6 +82,8 @@ if __name__ == "__main__":
     time_taken = []
     
     for i, (x, y) in tqdm(enumerate(zip(test_images, test_masks)), total = len(test_images)):
+        
+        
         """ Extract the name """
         name = x.split("/")[-1].split(".")[0]
         #print(name)
@@ -145,14 +152,15 @@ if __name__ == "__main__":
         
         cv2.imwrite(f"results/{name}.png", cat_images)
 
-
+    logging.info("Saved the Resulted Mask Images at results folder...")
+    
     jaccard = metrics_score[0] / len(test_images)
     f1 = metrics_score[1] / len(test_images)
     recall = metrics_score[2] / len(test_images)
     precision = metrics_score[3] / len(test_images)
     acc = metrics_score[4] / len(test_images)
     print(f"Jaccard: {jaccard:1.4f} - F1: {f1:1.4f} - Recall: {recall:1.4f} - Precision: {precision:1.4f} - Acc: {acc:1.4f}")
-
+    logging.info(f"Test Metrics are: Jaccard: {jaccard:1.4f} - F1: {f1:1.4f} - Recall: {recall:1.4f} - Precision: {precision:1.4f} - Acc: {acc:1.4f}")
     fps = 1 / np.mean(time_taken)
     print("FPS: ", fps)
             

@@ -6,7 +6,7 @@ from tqdm import tqdm
 from glob import glob
 from albumentations import HorizontalFlip, VerticalFlip, Rotate
 from utils import create_dir
-
+from logger import logging
 
 
 def load_data(path):
@@ -111,5 +111,7 @@ if __name__ == "__main__":
                  masks = test_mask, 
                  save_path = os.path.join(os.getcwd(), "augmented_dataset", "test"), 
                  augment = False)
+    
+    logging.info(f"Data Augmentation Done for both train and test images and masks...")
     
     

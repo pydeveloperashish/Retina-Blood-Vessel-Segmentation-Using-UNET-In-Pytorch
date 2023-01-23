@@ -9,7 +9,7 @@ from utils import seeding, create_dir, epoch_time
 from unet.unet_model import build_unet
 from unet.loss import DiceLoss, DiceBCELoss
 from data import RetinaDataset
-
+from logger import logging
 
 
 def train(model, loader, optimizer, loss_fn, device):
@@ -119,6 +119,7 @@ if __name__ == "__main__":
     
     
     """ Training the Model """
+    logging.info(f"Started training the model...")
     best_valid_loss = float("inf")
     
     for epoch in tqdm(range(0, NUM_EPOCHS)):
@@ -138,10 +139,10 @@ if __name__ == "__main__":
             
             best_valid_loss = valid_loss
             torch.save(model.state_dict(), CHECKPOINT_PATH)
+            logging.info(f"Saved the checkpoint as valid loss improved to {valid_loss} at {epoch} Epoch.")
         
         
         end_time = time.time()
-        
         epoch_mins, epoch_secs = epoch_time(start_time = start_time, 
                                             end_time = end_time)
         
@@ -150,3 +151,5 @@ if __name__ == "__main__":
         data_str += f'\tTrain Loss: {train_loss:.3f}\n'
         data_str += f'\t Val. Loss: {valid_loss:.3f}\n'
         print(data_str)
+        
+    logging.info(f"Training Completed...")
