@@ -80,7 +80,7 @@ if __name__ == "__main__":
     W = 512
     SIZE = (H, W)
     BATCH_SIZE = 1
-    NUM_EPOCHS = 10
+    NUM_EPOCHS = 50
     LR = 0.001
     CHECKPOINT_PATH = os.path.join(os.getcwd(), "files", "checkpoint.pth")
     
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     
     
     """ Setup Device and Model """
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = build_unet()
     model = model.to(device)
     
