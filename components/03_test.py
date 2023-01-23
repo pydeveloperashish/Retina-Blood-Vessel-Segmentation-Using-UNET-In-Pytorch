@@ -153,10 +153,9 @@ if __name__ == "__main__":
             [image, line, y_pred], axis = 1
             )
         
-        sample_input_output = cv2.resize(sample_input_output, (SIZE))
         
-        cv2.imwrite(f"results/{name}.png", cat_images)
-        cv2.imwrite(f"sample_result.png", sample_input_output)
+        cv2.imwrite(os.path.join(os.getcwd(), "results", f"{name}.png"), cat_images)
+        cv2.imwrite(os.path.join(os.getcwd(), "sample_result.png"), sample_input_output)
 
     logging.info("Saved the Resulted Mask Images at results folder...")
     
