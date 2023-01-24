@@ -1,12 +1,7 @@
-from distutils.command.install import install
 from pkg_resources import Requirement
 from setuptools import find_packages, setup
-from typing import List
 
-def get_requirements() -> List[str]:
-    requirement_list : List[str] = []
-    return requirement_list
-    
+
     
 setup(
     name = "Retina-Blood-Vessels-Segmentation",
@@ -14,8 +9,11 @@ setup(
     author = "Developer Ashish",
     author_email = "therobomarket@gmail.com",
     packages = find_packages(),
-    install_requires = get_requirements()
-)
+    ##install_requires = get_requirements(),
+    description = "Retina-Blood-Vessels-Segmentation-Using-UNET-Pytorch",
+    url = "https://github.com/pydeveloperashish/Retina-Blood-Vessel-Segmentation-Using-UNET-In-Pytorch",
+    
+    )
 
 
 
