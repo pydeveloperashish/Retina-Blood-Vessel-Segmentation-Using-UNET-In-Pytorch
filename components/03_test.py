@@ -53,7 +53,7 @@ if __name__ == "__main__":
     seeding(42)
     
     """ Create Directories """
-    create_dir("results")
+    create_dir("test_results")
     
     """ Load Dataset """
     AUGMENTED_DATASET_DIR_PATH = os.path.join(os.getcwd(), "augmented_dataset")
@@ -154,7 +154,7 @@ if __name__ == "__main__":
             )
         
         
-        cv2.imwrite(os.path.join(os.getcwd(), "results", f"{name}.png"), cat_images)
+        cv2.imwrite(os.path.join(os.getcwd(), "test_results", f"{name}.png"), cat_images)
         cv2.imwrite(os.path.join(os.getcwd(), "sample_result.png"), sample_input_output)
 
     logging.info("Saved the Resulted Mask Images at results folder...")

@@ -46,3 +46,6 @@ tqdm==4.64.1
 typing_extensions
 urllib3 
 pytest
+flask
+autopep8
+werkzeug
