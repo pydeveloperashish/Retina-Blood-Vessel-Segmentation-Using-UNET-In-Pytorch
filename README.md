@@ -22,7 +22,7 @@ Option 3.1:- If you have `bash shell` or `git bash` then you can download using 
 bash init_setup.sh
 ```
 
-3) Option 3.2:- If you dont have `bash shell` or `git bash` then you can directly download requirements.txt file so that you can use this app.
+Option 3.2:- If you dont have `bash shell` or `git bash` then you can directly download requirements.txt file so that you can use this app.
 ```
 pip install -r requirements.txt
 ```
