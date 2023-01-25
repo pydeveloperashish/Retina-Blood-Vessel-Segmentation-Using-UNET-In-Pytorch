@@ -11,15 +11,18 @@ I have dropped `1st_manual` folder from `training` directory and only using `ima
 
 
 `How to Run:-`
-1) Clone the Repo/Download the Repo
+
+1) Download the weights file from here:- https://drive.google.com/file/d/1FUnCgGrdL_o9B9etGYSmMFpURMVq4ZJi/view?usp=sharing
+
+2) Clone the Repo/Download the Repo
 
 
-Option 2.1:- If you have `bash shell` or `git bash` then you can download using running `init_setup.sh` file by running a following command. 
+Option 3.1:- If you have `bash shell` or `git bash` then you can download using running `init_setup.sh` file by running a following command. 
 ```
 bash init_setup.sh
 ```
 
-3) Option 2.2:- If you dont have `bash shell` or `git bash` then you can directly download requirements.txt file so that you can use this app.
+3) Option 3.2:- If you dont have `bash shell` or `git bash` then you can directly download requirements.txt file so that you can use this app.
 ```
 pip install -r requirements.txt
 ```
