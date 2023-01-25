@@ -17,7 +17,7 @@ I have dropped `1st_manual` folder from `training` directory and only using `ima
 2) Clone the Repo/Download the Repo
 
 
-Option 3.1:- If you have `bash shell` or `git bash` then you can download using running `init_setup.sh` file by running a following command. 
+Option 3.1:- If you have `bash shell` or `git bash` then you can download using running `init_setup.sh` file by running a following command. After running this you can directly jump to 4th point that is running the app.py 
 ```
 bash init_setup.sh
 ```
