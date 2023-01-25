@@ -14,26 +14,28 @@ I have dropped `1st_manual` folder from `training` directory and only using `ima
 
 1) Download the weights file from here:- https://drive.google.com/file/d/1FUnCgGrdL_o9B9etGYSmMFpURMVq4ZJi/view?usp=sharing
 
-2) Clone the Repo/Download the Repo
+2) Put downloaded weights file in `files` directory.
+
+3) Clone the Repo/Download the Repo
 
 
-Option 3.1:- If you have `bash shell` or `git bash` then you can download using running `init_setup.sh` file by running a following command. After running this you can directly jump to 4th point that is running the app.py 
+Option 4.1:- If you have `bash shell` or `git bash` then you can download using running `init_setup.sh` file by running a following command. After running this you can directly jump to 4th point that is running the app.py 
 ```
 bash init_setup.sh
 ```
 
-Option 3.2:- If you dont have `bash shell` or `git bash` then you can directly download requirements.txt file so that you can use this app.
+Option 4.2:- If you dont have `bash shell` or `git bash` then you can directly download requirements.txt file so that you can use this app.
 ```
 pip install -r requirements.txt
 ```
 
 
-4) Run app.py
+5) Run app.py
 ```
 python app.py
 ```
 
-5) Now you will get a link in your terminal, open it or copy it and paste it in your browser, click on choose file, give the input image of Retina Images. You can find Retina Images in directory `sample_image_inputs_to_app`, and then click submit button, you will get your segmented output image.
+6) Now you will get a link in your terminal, open it or copy it and paste it in your browser, click on choose file, give the input image of Retina Images. You can find Retina Images in directory `sample_image_inputs_to_app`, and then click submit button, you will get your segmented output image.
 
 
 
