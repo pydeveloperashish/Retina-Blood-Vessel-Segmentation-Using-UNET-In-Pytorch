@@ -11,6 +11,7 @@ Dataset Link:- https://www.kaggle.com/datasets/andrewmvd/drive-digital-retinal-i
 `How to Run:-`
 1) Clone the Repo/Download the Repo
 
+
 Option 2.1:- If you have `bash shell` or `git bash` then you can download using running `init_setup.sh` file by running a following command. 
 ```
 bash init_setup.sh
