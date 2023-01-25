@@ -14,7 +14,7 @@ I have dropped `1st_manual` folder from `training` directory and only using `ima
 
 1) Download the weights file from here:- https://drive.google.com/file/d/1FUnCgGrdL_o9B9etGYSmMFpURMVq4ZJi/view?usp=sharing
 
-2) Put downloaded weights file in `files` directory.
+2) Put the downloaded weights file in `files` directory.
 
 3) Clone the Repo/Download the Repo
 
