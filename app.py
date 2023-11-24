@@ -7,6 +7,7 @@ import io
 from werkzeug.utils import secure_filename
 import cv2
 import torch
+
 from components.unet.unet_model import build_unet
 
 
@@ -119,4 +120,5 @@ def upload_image():
 
 
 
-app.run(debug = True, port = 2020)
+if __name__ == "__main__":
+    app.run(debug = True, host = '0.0.0.0', port = 5000)
