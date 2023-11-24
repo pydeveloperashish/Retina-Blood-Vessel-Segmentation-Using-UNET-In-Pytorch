@@ -33,6 +33,11 @@ def upload_image():
         filename = secure_filename(image.filename)
 
         basedir = os.path.abspath(os.path.dirname(__file__))
+        
+        if not os.path.exists(app.config["IMAGE_UPLOADS"]):      
+            os.makedirs(app.config["IMAGE_UPLOADS"])
+            print(f"Directory {app.config['IMAGE_UPLOADS']} created successfully.")
+            
         image.save(os.path.join(
             basedir, app.config["IMAGE_UPLOADS"], filename))
         
@@ -121,4 +126,4 @@ def upload_image():
 
 
 if __name__ == "__main__":
-    app.run(debug = True, host = '0.0.0.0', port = 5000)
+    app.run(debug = True, host = '0.0.0.0', port = 5001)

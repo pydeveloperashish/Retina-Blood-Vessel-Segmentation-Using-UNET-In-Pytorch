@@ -20,7 +20,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the current directory contents into the container at /app
 COPY files /app/files/
-COPY static /app/static/
 COPY sample_image_inputs_to_app  /app/sample_image_inputs_to_app/
 COPY components/ /app/components/
 COPY app.py /app/
