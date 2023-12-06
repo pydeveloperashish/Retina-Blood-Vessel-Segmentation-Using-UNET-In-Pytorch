@@ -47,3 +47,4 @@ flask
 autopep8
 werkzeug
 notebook
+gunicorn
