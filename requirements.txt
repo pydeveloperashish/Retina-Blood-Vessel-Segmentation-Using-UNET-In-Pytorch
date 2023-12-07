@@ -1,47 +1,47 @@
 -e .
 
-# albumentations==1.3.0
-# brotlipy==0.7.0
-# certifi 
-# cffi 
-# charset-normalizer 
-# contourpy==1.0.7
-# cryptography 
-# cycler==0.11.0
-# flit_core 
-# fonttools==4.38.0
-# idna 
-# imageio==2.24.0
-# joblib==1.2.0
-# kiwisolver==1.4.4
-# matplotlib==3.6.3
-# networkx==3.0
-# numpy
-# opencv-python==4.7.0.68
-# opencv-python-headless==4.7.0.68
-# packaging==23.0
-# pillow==9.4.0
-# pycparser 
-# pyOpenSSL 
-# pyparsing==3.0.9
-# PySocks 
-# python-dateutil==2.8.2
-# PyWavelets==1.4.1
-# PyYAML==6.0
-# qudida==0.0.4
-# requests 
-# scikit-image==0.19.3
-# scikit-learn==1.2.0
-# scipy==1.10.0
-# six
-# threadpoolctl==3.1.0
-# tifffile==2022.10.10
-# torch==1.12.0
-# torchaudio==0.12.0
-# torchvision==0.13.0
-# tqdm==4.64.1
-# typing_extensions
-# urllib3 
+albumentations==1.3.0
+brotlipy==0.7.0
+certifi 
+cffi 
+charset-normalizer 
+contourpy==1.0.7
+cryptography 
+cycler==0.11.0
+flit_core 
+fonttools==4.38.0
+idna 
+imageio==2.24.0
+joblib==1.2.0
+kiwisolver==1.4.4
+matplotlib==3.6.3
+networkx==3.0
+numpy
+opencv-python==4.7.0.68
+opencv-python-headless==4.7.0.68
+packaging==23.0
+pillow==9.4.0
+pycparser 
+pyOpenSSL 
+pyparsing==3.0.9
+PySocks 
+python-dateutil==2.8.2
+PyWavelets==1.4.1
+PyYAML==6.0
+qudida==0.0.4
+requests 
+scikit-image==0.19.3
+scikit-learn==1.2.0
+scipy==1.10.0
+six
+threadpoolctl==3.1.0
+tifffile==2022.10.10
+torch==1.12.0
+torchaudio==0.12.0
+torchvision==0.13.0
+tqdm==4.64.1
+typing_extensions
+urllib3 
 pytest
 flask
 autopep8
