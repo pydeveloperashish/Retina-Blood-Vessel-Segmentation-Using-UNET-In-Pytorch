@@ -21,7 +21,7 @@ COPY requirements.txt /app/
 COPY files /app/files/
 COPY sample_image_inputs_to_app  /app/sample_image_inputs_to_app/
 COPY components/ /app/components/
-# COPY app.py /app/
+COPY app.py /app/
 COPY templates /app/templates/
 COPY test_results /app/test_results/
 # COPY try.py /app/
