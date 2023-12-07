@@ -31,4 +31,4 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Run app.py when the container launches
 # CMD ["python3", "try.py"]
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers=4", "try:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers=4", "app:app"]
