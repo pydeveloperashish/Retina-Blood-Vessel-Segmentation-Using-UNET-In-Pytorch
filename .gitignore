@@ -132,3 +132,4 @@ dmypy.json
 files/checkpoint.pth
 ./augmented_dataset
 notes.txt
+retina_segmentation_input_images_samples.zip
