@@ -48,3 +48,4 @@ autopep8
 werkzeug
 notebook
 gunicorn
+gdown

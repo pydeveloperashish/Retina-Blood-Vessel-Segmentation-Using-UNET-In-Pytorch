@@ -9,7 +9,7 @@ import cv2
 import torch
 
 from components.unet.unet_model import build_unet
-
+from components.utils import get_model_from_gdrive
 
 app = Flask(__name__)
 
@@ -54,18 +54,24 @@ def upload_image():
         SIZE = (H, W)
         CHECKPOINT_PATH = os.path.join(os.getcwd(), "files", "checkpoint.pth")
 
-
+        """ This below lines of checking CHECKPOINT_PATH and its Size in MB is added later """
+        if not os.path.exists(CHECKPOINT_PATH) or os.path.getsize(CHECKPOINT_PATH) / (1024 * 1024) < 100:
+            print("Downloading the checkpoint model")
+            get_model_from_gdrive()
+            print('Checkpoint model downloaded successfully...')
+            CHECKPOINT_PATH = os.path.join(os.getcwd(), "files", "checkpoint.pth")
+        
         """ Load the Checkpoint """
+    
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = build_unet()
         model = model.to(device)
         model.load_state_dict(torch.load(CHECKPOINT_PATH, map_location = device))
-        
+        print('Checkpoint model found')
 
         """" Reading the image """
-       
         x = cv2.resize(src = opencvImage, dsize = SIZE)
-        print(x.shape)
+        # print(x.shape)
         x = np.transpose(x, (2, 0, 1))  # (3, 512, 512)
         x = x / 255.0
         x = np.expand_dims(x, axis = 0)  # (1, 3, 512, 512)  Batch Size added.
